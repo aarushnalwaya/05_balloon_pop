@@ -1,3 +1,4 @@
+
 """
 click_detection: figures out whether a click landed on a balloon.
 """
@@ -12,6 +13,6 @@ def check_pop(balloons, click_pos):
         dx = click_pos[0] - balloon.x
         dy = click_pos[1] - balloon.y
         distance_squared = dx * dx + dy * dy
-        if distance_squared <= balloon.radius:
+        if distance_squared <= balloon.radius * balloon.radius:
             return balloon
     return None
